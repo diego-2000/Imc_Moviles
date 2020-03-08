@@ -6,25 +6,73 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/btt_aceptar"
+        android:layout_width="147dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="144dp"
+        android:text="Aceptar"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_estatura" />
+
+    <EditText
+        android:id="@+id/editText_peso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/editText_estatura"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView_peso"
+        app:layout_constraintTop_toBottomOf="@+id/texv_resultado" />
+
+    <EditText
+        android:id="@+id/editText_estatura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginBottom="70dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/btt_aceptar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView_estatura"
+        app:layout_constraintTop_toBottomOf="@+id/editText_peso" />
+
+    <TextView
+        android:id="@+id/textView_estatura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:text="Estatura"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText_estatura"
+        app:layout_constraintEnd_toStartOf="@+id/editText_estatura"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginBottom="72dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="83dp"
+        android:layout_marginBottom="19dp"
         android:text="Calcula IMC"
-        app:layout_constraintBottom_toTopOf="@+id/editText_peso"
-        app:layout_constraintStart_toStartOf="@+id/editText_peso" />
-
-    <Button
-        android:id="@+id/btt_aceptar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="61dp"
-        android:text="Aceptar"
-        app:layout_constraintStart_toStartOf="@+id/editText_estatura"
-        app:layout_constraintTop_toBottomOf="@+id/editText_estatura" />
+        android:textColor="@android:color/background_dark"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/texv_resultado"
+        app:layout_constraintStart_toStartOf="@+id/texv_resultado"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView_peso"
@@ -32,58 +80,33 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="14dp"
         android:layout_marginLeft="14dp"
-        android:layout_marginEnd="23dp"
-        android:layout_marginRight="23dp"
-        android:layout_marginBottom="45dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginBottom="40dp"
         android:text="Peso"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView_estatura"
         app:layout_constraintEnd_toStartOf="@+id/editText_peso"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView_estatura"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
-        android:layout_marginLeft="14dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginRight="3dp"
-        android:text="Estatura"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editText_estatura"
-        app:layout_constraintEnd_toStartOf="@+id/editText_estatura"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/editText_peso"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="274dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView_peso"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editText_estatura"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView_estatura"
-        app:layout_constraintTop_toBottomOf="@+id/editText_peso" />
-
-    <TextView
         android:id="@+id/texv_resultado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginRight="18dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="24dp"
         android:text="IMC"
-        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        android:textAllCaps="true"
+        android:textColor="@color/colorAccent"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText_peso"
+        app:layout_constraintEnd_toEndOf="@+id/editText_peso"
+        app:layout_constraintStart_toEndOf="@+id/textView_peso"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
